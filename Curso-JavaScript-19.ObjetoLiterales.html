@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos Literales</title>
+</head>
+<body>
+    <h1>Fundamentos de JavaScript</h1>
+    <script>
+     let nombre = "Panchito"
+     edad = 7;
+
+     const perro={
+       nombre:nombre,
+       edad:edad,
+       ladrar: function(){
+         console.log("guau guau guau!!!!");
+       }
+      }
+     console.log(perro);
+     perro.ladrar();
+
+     //OBJETOS LITERALES
+
+     const dog={
+       nombre,
+       edad,
+       raza: "Callejero",
+       ladrar1(){
+         console.log("guauuu guauu soy un perro");
+       }
+     }
+     
+     console.log(dog);
+     dog.ladrar1();
+
+    </script>
+</body>
+</html>
