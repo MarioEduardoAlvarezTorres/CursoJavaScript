@@ -1,0 +1,68 @@
+------------------------------------Características------------------------------------
+Es un lenguaje de alto nivel
+Interpretado
+Es Dinámico
+Débilmente Tipado
+Multi Paradigma
+Sensible a MAYÚSCULAS y minúsculas
+No necesita los puntos y comoas al final de cada línea
+------------------------------------Escritura de código------------------------------------
+Los identificadores deben comenzar con:
+*Una letra
+*Un signo de dolar $
+*Un guion bajo_
+*Nunca con números o caracteres especiales
+
+Usar snake_case en:
+*Archivos: mi_archivo_javascript.js
+
+Usar UPPER_CASE en (constantes):
+* Constantes: const UNA_CONSTANTE = 'valor de la constante'
+
+Usa UpperCamelCase en:
+* Clases: class SerHumano{}
+
+Usar loweCamelCase en:
+* Objetos: const unObejto={}
+* Primitivos: let unaCadena = 'hola mundo'
+* Funciones: holaMundo(nombre){}
+* Instancias
+
+Palabras reservadas:
+A: abstract
+B: boolean, break, byte
+C: case, catch, char, class, const, continue
+D: debugger, default, delete, do, double
+E: else, enum, export, extends
+F: false, final, finally, float, for, function
+G: goto
+I: if, implements, import, in, instanceof, int, interface
+L: let, long
+N: native, new, null
+P: package, private, protected, public
+R: return
+S: short, static, super, switch, synchronized
+T: this, throw, throws, transient, true, try, typeof
+V: var, volatile, void
+W: while, with
+
+Ordenamiento de código:
+1.Importación de modulos
+2.Declaración de variables
+3.Declaración de funciones
+4.Ejecución del código
+
+Tipos de datos:
+*Primitivos: Se accede directamente al valor.
+string
+number
+boolean
+null
+undefined
+NaN
+*Compuestos: Se accede a la referencia del valor.
+object = {}
+array = []
+function () { }
+Class {}
+etc.
