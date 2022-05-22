@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+<body>
+    <h1>Fundamentos de JavaScript</h1>
+    <script>
+        // Declaración de Funciones
+        function estoEsUnaFuncion(){
+            console.log("Uno");
+            console.log("Dos");
+            console.log("Tres");
+        }
+
+        /*Es opcional que se retornel valores*/
+        function unaFuncionQueDevuelveValor(){
+            console.log("Uno");
+            return 19;
+            console.log("Dos");
+            console.log("Tres");
+            return "Devolveremos una cadena de texto"
+        }
+
+        /*Tambien es opcional aceptar parametros*/
+        function saludar(nombre="Desconocido",edad=0){
+            console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años`);
+        }
+
+        /*hostng*/
+        funcionDeclarada();
+        function funcionDeclarada(){
+            console.log("Esta es una función declarada,puede invocarse en cualquier parte de nuestro código incluso antes de que la función sea declarada")
+        }
+
+        /*Función Anónima*/
+        //funcionExpresada();
+        const funcionExpresada = function(){
+            console.log("Esto es una función expresada,es decir,una función que se le ha asignado como valor a una variable,si invocamos esta función antes de su definición JS nos dirá:");
+        }
+        funcionExpresada();
+        
+        //Invocación de función estoEsUnaFuncion
+        
+        /*Una función es un bloque de código autocontenido,que
+        se puede definir una vez y ejecutar en cualquier momento
+        
+        estoEsUnaFuncion();
+        estoEsUnaFuncion();
+        estoEsUnaFuncion();
+        estoEsUnaFuncion();*/
+        
+        //Invocación de unaFuncionQueDevuelveValor
+
+        /*let valorDeFuncion = unaFuncionQueDevuelveValor();
+        console.log(valorDeFuncion);*/
+
+        //Invoación de saludar
+
+        saludar("Lalo",22);
+        //Se pueden asignar valores por defecto
+        saludar();
+        
+        
+    </script>
+</body>
+</html>
