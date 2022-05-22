@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fundamentos JavaScript</title>
+</head>
+<body>
+  <h1>Fundamentos de JavaScript</h1>
+
+  <script>
+   //------------------------PRIMITIVOS------------------------
+   //Con los primitivos se accede directamente al valor
+   //Se utiliza cuando tengamos variables que no vayan a cambiar su valor
+   //No se puede tener constantes vacias
+   const PI = 3.1416;
+   //const NUEVE;
+   console.log(PI);
+   //PI=3.15; NO SE PUEDE CAMBIAR cosa que con las variable si se puede hacer (VAR Y LET)
+   //-------------------------COMPUESTOS-------------------------
+   //Se accede a la referencia del valor en ese sentido se permite agregar mas propiedades
+   const objeto ={
+       nombre:"Mario",
+       edad:22
+   }
+
+   const colores =["blanco","negro"];
+
+   console.log(objeto);
+   console.log(colores);
+
+   objeto.correo = "eduardoat43@gmail.com";
+   colores.push("anaranjado");
+
+   console.log(objeto);
+   console.log(colores);
+
+  </script>
+</body>
+</html>
