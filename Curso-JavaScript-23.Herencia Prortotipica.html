@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HERENCIA PROTOTIPICA</title>
+</head>
+<body>
+    <h1>Fundamentos de JavaScript</h1>
+    <script>
+     //SE MEJORA EL CODIGO ANTERIOR MANDANDO LOS METODOS A LOS PROTOTIPOS
+     function Animal(nombre,genero) {
+      //Atributos 
+      this.nombre=nombre;
+      this.genero=genero;
+      }
+      //Se sacan los Métodos de la función
+      Animal.prototype.sonar = function(){
+        console.log("Sonido");
+       }
+     //HERENCIA PROTOTIPICA
+     function Perro(nombre,genero,tamanio){
+      //SUPER MANDA A LLAMAR AL CONSTRUCTOR DEL PADRE
+      this.super =  Animal;
+      this.super(nombre,genero);
+      this.tamanio = tamanio;
+     }
+     //PERRO ESTA HEREDANDO DE ANIMAL
+     Perro.prototype = new Animal();
+     Perro.prototype.constructor = Perro;
+
+     //SOBREESCRITURA DE METODOS DE PROTOTIPO PADRE EN EL HIJO
+     Perro.prototype.sonar = function(){
+       console.log("Soy un perro y mi sonido es un ladrdio");
+     }
+
+     Perro.prototype.ladrar = function(){
+       console.log("guau guau");
+     }
+
+     const snoopy = new Perro("Snoopy","Macho","Mediano");
+
+     console.log(snoopy);
+    </script>
+</body>
