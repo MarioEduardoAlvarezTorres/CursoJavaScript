@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <h1>Fundamentos de JavaScript</h1>
+    <script>
+     //Forma de definir funciones anonimas que sean expresadas
+     //Una función expresada se genera cuando a una variable se le asigna el valor de una funcion anonima
+
+     /*const saludo = function () {
+       console.log("hola");
+     }
+
+     saludo();*/
+
+     //No es una función declarada, las declaras no llevan "const"
+    
+
+     //UNA ARROW FUNCTIONS ES QUITAR LA PALABRA "FUNCTIONS"
+     //SE PONE UN =>
+
+     /*const saludo =() => console.log("hola");
+     saludo();*/
+
+     /*Para recibir parametros se pone entre los parentesis
+     
+     Cuando una función flecha recibe un parametro ya no es necesario poner los parentesis*/
+     const saludo =(nombre) => console.log(`Hola ${nombre}`);
+     saludo("Mario");
+
+     const sumar = function(a,b){
+       return a+b;
+     }
+
+     console.log(sumar(8,9))
+
+     /*Tambien nos podemos evitar escribir la palabra return*/
+
+     const suma = (a,b) => a+b;
+     console.log(suma(1,2))
+
+     const funcionDeVariasLineas = () =>{
+       console.log("Uno");
+       console.log("Dos");
+       console.log("Tres");
+     }
+     
+     funcionDeVariasLineas();
+
+     const numeros= [1,2,3,4,5,6,7];
+
+     numeros.forEach((el,position)=>console.log(`El elemento ${el}, esta en la posicion ${position}`));
+
+     /*Los arrow funtions capturan el objeto this del contexto en el 
+     que se encuentren*/
+
+    /*function Perro(){
+      console.log(this);
+    }
+
+    Perro();*/
+
+    const perro={
+      nombre: "coffee",
+      ladrar:() =>{
+        console.log(this);
+      }
+    }
+
+    perro.ladrar();
+    </script>
+</body>
+</html>
