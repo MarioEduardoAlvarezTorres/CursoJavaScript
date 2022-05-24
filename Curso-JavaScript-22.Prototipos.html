@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones Prototipicas</title>
+</head>
+<body>
+    <h1>Fundamentos de JavaScript</h1>
+    <script>
+     //POO
+     /*
+     Clases - Modelo a seguir.
+     Objeto - Es una instancia de una clase
+     Cuentan con:
+     Atributos- Es una caracteristica o propiedad del objeto
+     (cin sus varaibles dentro de un objeto)
+     -Métodos - Son las acciónes que un objeto piede realiazr(funciones dentro de un objeto)*/
+
+
+     /*Un prototipo es un mecanismo por el cual un objto puede heredar de un objeto padre
+     caracteristicas y meotodos.*/
+
+     /*const animal={
+      nombre:"Tobye",
+      sonar(){
+        console.log("gua guau soy un perro");
+      }
+     }
+
+     const animal2={
+      nombre:"Lola Bunny",
+      sonar(){
+        console.log("gua guau soy Lola");
+      }
+     }
+     
+     console.log(animal);
+     console.log(animal2);*/
+
+     //FUNCION CONSTRUCTORA
+     /*function Animal(nombre,genero) {
+      //Atributos 
+      this.nombre=nombre;
+       this.genero=genero;
+      //Métodos
+       this.sonar = function(){
+        console.log("Sonido");
+       }
+     }*/
+     
+     //SE MEJORA EL CODIGO ANTERIOR MANDANDO LOS METODOS A LOS PROTOTIPOS
+     function Animal(nombre,genero) {
+      //Atributos 
+      this.nombre=nombre;
+      this.genero=genero;
+      }
+      //Se sacan los Métodos de la función
+      Animal.prototype.sonar = function(){
+        console.log("Sonido");
+       }
+     const snoopy = new Animal("Snoopy","Macho");
+     const lolabunny = new Animal("lolabunny","Hembra");
+
+     console.log(snoopy);
+     console.log(lolabunny);
+    </script>
+</body>
