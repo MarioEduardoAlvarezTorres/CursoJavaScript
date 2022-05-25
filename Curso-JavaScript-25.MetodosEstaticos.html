@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetodosEstaticos</title>
+</head>
+<body>
+    <h1>Fundamentos de JavaScript</h1>
+    <script>
+      /*No se pueden usar clases privadas,todas son publicas
+      */
+      /*Un metodo estatico es aquel que se puede ejecutar sin necesidad
+      de instanciar la clase*/
+      //CREAMOS LA CLASE PERRO
+      
+      class Animal{
+        constructor(nombre,genero){
+          this.nombre= nombre;
+          this.genero= genero;
+        }
+        //METODOS
+        sonar(){
+          console.log("Hago sonidos porque estoy vivo");
+        }
+
+        saludar(){
+          console.log(`Hola me llamo ${this.nombre}`);
+        }
+      }
+
+      class Perro extends Animal{
+        constructor(nombre,genero,tamanio){
+          //Es un metodo que manda a llamar el metodo constructor de la clase padre
+          super(nombre,genero)//que son los atributos del padre (Animal)
+          this.tamanio=tamanio;
+          this.raza = null;
+        }
+        //SOBRE ESCRITURA
+        sonar(){
+          console.log("Soy un perro y mi sonido es un ladrido");
+        }
+        ladrar(){
+          console.log("guauuuu guauuu");
+        }
+        static queEres(){
+        console.log("Somos los mejores amigos del hombre");
+        }
+        /*Los setters y hetters son métodos especiales que nos permiten
+        establecer y obtner los valores de atributos de nuestra clase*/
+        get getRaza(){//OBTENEMOS EL VALOR DE LA PROPIEDAD
+          return this.raza;
+        }
+        set setRaza(raza){
+          this.raza=raza;
+        }
+      }
+
+      Perro.queEres();
+
+      const mimi = new Animal("Mimi","Hembra"),
+      scooby = new Perro("Scooby","Macho","Gigante");
+
+      console.log(mimi);
+      mimi.saludar();
+      mimi.sonar();
+      console.log(scooby);
+      scooby.saludar();
+      scooby.sonar();
+      scooby.ladrar();
+      console.log(scooby.getRaza);
+      scooby.setRaza= "Gran Danés"
+      console.log(scooby.getRaza);
+      
+    </script>
+</body>

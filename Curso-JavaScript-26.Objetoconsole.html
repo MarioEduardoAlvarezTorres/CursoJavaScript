@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto console</title>
+</head>
+<body>
+    <h1>Fundamentos de JavaScript</h1>
+    <script>
+        console.log(console);
+        console.error("Esto es un error");
+        console.warn("Esto es un Warning");
+        console.info("Mensaje Informativo");
+
+        let nombre = "Eduardo",
+            apellido = "Alvarez",
+            edad = 22;
+        console.log(nombre,apellido,edad);
+        console.log(`Hola mi nombres es ${nombre} ${apellido} y tengo ${edad}`);
+        //como en c se puede hacer uso de "comodines" como %s %c %d %f
+        console.clear();
+
+        console.log(window);
+        console.log(document);
+        console.dir(document);
+
+        console.clear();
+
+        //HACER GRUPOS EN CONSOLA
+        console.group("Cursos de joinmircha en u2");
+        console.log("Curso 1");
+        console.log("Curso 2");
+        console.log("Curso 3");
+        console.groupEnd();
+
+        console.groupCollapsed("Cursos de joinmircha en u2");
+        console.log("Curso 1");
+        console.log("Curso 2");
+        console.log("Curso 3");
+        console.groupEnd();
+
+        console.clear();
+
+        //TABLA
+        console.log(console);
+        console.table(Object.entries(console).sort());
+
+        console.clear();
+
+        //MOSTRAR ARREGLOS
+        const numeros = [1,2,3,4,5];
+        const vocales = ["a","e","i","o","u"];
+        console.table(numeros);
+        console.table(vocales);
+
+        console.clear();
+
+        //OBJETOS
+        const perro ={
+            nombre:"cholo",
+            raza:"cholomaster"
+        }
+        console.table(perro);
+        
+        console.clear();
+        
+        //TIEMPO
+        //SE PONE LA MISMA ETIQUETA EN EL TIME Y EN EL TIMEEND
+        console.time("Cuanto tarda mi codigo?");
+        const arreglo = Array(1000000);
+
+        for (let i = 0; i < arreglo.length; i++) {
+            arreglo[i]= i;
+        }
+        console.timeEnd("Cuanto tarda mi codigo?");
+
+        console.clear();
+        //CUANTAS VECES SE EJECUTÓ LA LINEA DE CODIGO
+        for (let i = 0; i <= 100; i++) {
+            console.count("Código del for")
+            console.log(i);
+        }
+        console.clear();
+        //MINI LIBRERIA PARA HACER PRUEBAS
+        let x =1,
+            y=2,
+            pruebaXY = "Se espera que X siempre sea menor que Y";
+        console.assert(x<y,{x,y,pruebaXY})
+    </script>
+</body>
