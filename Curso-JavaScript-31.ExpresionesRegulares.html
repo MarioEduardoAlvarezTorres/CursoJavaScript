@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expresión regulares</title>
+</head>
+<body>
+    <h1>Fundamentos de JavaScript</h1>
+    <script>
+        /*Expresion regulares: secuencia de caracteres que forman un patron
+        de busqueda,principlamente utilizada para la busqueda de patrones
+         en las cadenas de caracteres
+        */
+        
+        //FORMA DE HACER DESDE EL CONSTRUCTOR
+        let cadena = "Lorem lorem 1 ipsum dolor sit amet consectetur, adipisicing elit. Accusamus eligendi quasi neque mollitia, saepe porro consectetur, alias, illum ipsa nulla voluptatum quaerat enim consequatur consequuntur! Culpa excepturi quae ad repellendus.  " 
+        
+        
+        //let expReg = new RegExp("lorem","ig");
+        /*console.log(expReg.test(cadena));
+        console.log(expReg.exec(cadena));*/
+        
+        let expReg2 = /lorem{1,3}/ig;
+        console.log(expReg2.test(cadena));
+        console.log(expReg2.exec(cadena));
+
+        //[] = listado valido
+        //{rangoinicial,rangofinal} = repetición
+    </script>
+</body>
+
