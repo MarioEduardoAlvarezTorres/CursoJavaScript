@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevos Tipos de Datos en JavaScript</title>
+</head>
+
+<body>
+  <h1>Nuevos Tipos de Datos en JavaScript</h1>
+  <script>  
+  /*Se usa como una coleccion de datos*/
+  const mapa = new Map();
+  mapa.set("nombre","eduardo");
+  mapa.set("apellidos","alvarez");
+  mapa.set("edad",22);
+
+  console.log(mapa);
+  console.log(mapa.size);
+  console.log(mapa.has("correo"));
+  console.log(mapa.has("apellidos"));
+  console.log(mapa.get("nombre"));
+  //SOBREEESCRIBIMOS CON EL MISMO SET
+  mapa.set("nombre","Eduardo Alvarez Torres");
+  console.log(mapa.get("nombre"));
+  mapa.delete("apellidos");
+  console.log(mapa);
+
+  //valor de llaves variables
+  mapa.set(19,"diecinueve");
+  mapa.set(false, "falso");
+  mapa.set({},{});
+  console.log(mapa);
+  
+  for (let [key,value] of mapa) {
+    console.log(`Llave: ${key}\nValor: ${value}`);
+  }
+  /*SE PUEDEN GENERAR LLAVES QUE NO SEN CADENAS DE TEXTO (DESACONSEJABLE)*/
+
+
+  const mapa2 = new Map([
+    ["nombre","el edy"],
+    ["edad",7],
+    [null,"nulo"]
+  ]);
+
+  console.log(mapa2);
+
+  const llaveMapa2 = [...mapa2.keys()];
+  const valoresMapa2 = [...mapa2.values()];
+  console.log(llaveMapa2,valoresMapa2)
+
+  </script>
+</body>
+

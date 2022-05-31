@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevos Tipos de Datos en JavaScript</title>
+</head>
+
+<body>
+  <h1>Nuevos Tipos de Datos en JavaScript</h1>
+  <script>  
+  console.log(this);
+    this.lugar = "Contexto Global";
+    function saludar(saludo, aQuien) {
+      console.log(`${saludo} ${aQuien} desde el ${this.lugar}`);
+    }
+    saludar("Hola", "eledy");
+    const obj = {
+      lugar: "Contexto Objeto"
+    }
+    saludar.call(obj, "Hola", "Eduardo");
+    saludar.call(null, "Hola", "Eduardo");
+    saludar.call(this, "Hola", "Eduardo");
+    saludar.apply(obj, ["Adios", "Alvarez"]);
+    saludar.apply(null, ["Adios", "Alvarez"]);
+    saludar.apply(this, ["Adios", "Alvarez"]);
+    this.nombre = "Window";
+    const persona = {
+      nombre: "Eduardo",
+      saludar: function () {
+        console.log(`Hola ${this.nombre}`)
+      }
+    }
+    persona.saludar();
+    const otraPersona = {
+      saludar: persona.saludar.bind(this)
+    }
+    otraPersona.saludar();
+  </script>
+</body>
+

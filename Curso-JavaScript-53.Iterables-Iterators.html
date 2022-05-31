@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevos Tipos de Datos en JavaScript</title>
+</head>
+
+<body>
+  <h1>Nuevos Tipos de Datos en JavaScript</h1>
+  <script>
+  /*ITERABLES:Es elemento el cual su contenido se puede recorrer
+  ITERADOR:Mecanismo que recorre los elementos 
+  */
+    const iterable = [1,2,3,4,5,"hola"];
+    //Accedemos al iterador del iterable
+    const iterador = iterable[Symbol.iterator]();
+    console.log(iterable);
+    console.log(iterador);
+
+    //¿COMO RECORRER?: CON NEXT
+    // console.log(iterador.next());
+    // console.log(iterador.next());
+    // console.log(iterador.next());
+    // console.log(iterador.next());
+    // console.log(iterador.next());
+    // console.log(iterador.next());
+    // console.log(iterador.next());
+
+    let next = iterador.next();
+    while(!next.done){
+      console.log(next.value);
+      next = iterador.next();
+    }
+    
+  </script>
+</body>
+
