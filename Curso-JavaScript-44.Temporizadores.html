@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asincronía en JavaScript</title>
+</head>
+<body>
+    <script>
+        /*
+        FORMATO DE PRIMER TEMPORIZADOR MOSTRADO
+        setTimeout(() => {
+            setTimeout(()=>)
+        }, timeout);
+        
+        SOLO SE EJECUTA UNA VEZ*/
+        // console.log("Inicio");
+        // setTimeout(() => {
+        //     console.log("Ejecutando un setTimeout,esto se ejecutará una sola vez");
+        // }, 3000);
+
+        /*SE EJECUTA VARIAS VECES (INDEFINIDAMENTE)*/
+        // setInterval(() => {
+        //     console.log("Ejecutando un setInterval,esto se ejecutará una sola vez");
+        // }, 1000);
+
+        /*RELOJ*/
+        let temporizador = setInterval(() => {
+            console.log(new Date().toLocaleTimeString());
+        }, 1000);
+
+        //SE NECESITO DE ALMACENAR EL TEMPORIZADOR
+        clearTimeout(temporizador);
+    </script>
+</body>
+
